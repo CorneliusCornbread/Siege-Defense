@@ -1,0 +1,7 @@
+﻿namespace SiegeDefense
+{
+	public struct #SCRIPTNAME#
+	{
+
+	}
+}
