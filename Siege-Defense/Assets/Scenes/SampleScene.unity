@@ -478,13 +478,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2201098491531870179, guid: c050dc0210b4a504b8f8f9d91b4d419d, type: 3}
-      propertyPath: startRandDir
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2201098491531870180, guid: c050dc0210b4a504b8f8f9d91b4d419d, type: 3}
       propertyPath: sceneId
       value: 2726264999
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201098491531870180, guid: c050dc0210b4a504b8f8f9d91b4d419d, type: 3}
+      propertyPath: m_AssetId
+      value: c050dc0210b4a504b8f8f9d91b4d419d
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c050dc0210b4a504b8f8f9d91b4d419d, type: 3}
@@ -1060,6 +1060,8 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   health: 100
+  visualHealthAffect: 1
+  rend: {fileID: 1587536081}
   _onHealthChange:
     m_PersistentCalls:
       m_Calls:

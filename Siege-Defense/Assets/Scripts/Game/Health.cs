@@ -14,6 +14,12 @@ namespace SiegeDefense.Game
 		private int health = 100;
 
 		[SerializeField]
+		private bool visualHealthAffect = true;
+
+		[SerializeField]
+		private SpriteRenderer rend;
+
+		[SerializeField]
         private HealthChangeEvent _onHealthChange;
 
         public HealthChangeEvent OnHealthChange
@@ -24,8 +30,20 @@ namespace SiegeDefense.Game
 
         public void ServerDamage(int damage)
 		{
+			if (!isServer) return;
+
 			health -= damage;
+			UpdateSprite(health);
 			OnHealthChange.Invoke(health);
+		}
+
+		private void UpdateSprite(int health)
+		{
+			if (!visualHealthAffect) return;
+
+			Color c = rend.color;
+			c.a = Mathf.Clamp(health / 100f, 0.2f, 1f);
+			rend.color = c;
 		}
 	}
 }

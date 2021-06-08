@@ -17,15 +17,6 @@ namespace SiegeDefense.Game
             {
 				Debug.Log("Game over");
             }
-
-			UpdateSprite(health);
-        }
-
-		private void UpdateSprite(int health)
-        {
-			Color c = rend.color;
-			c.a = health / 100f;
-			rend.color = c;
         }
 	}
 }

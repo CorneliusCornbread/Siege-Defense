@@ -5,12 +5,16 @@ using UnityEngine;
 
 namespace SiegeDefense.Enemy
 {
-	[RequireComponent(typeof(Rigidbody2D))]
+	[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer))]
 	public class EnemyBehaviour : NetworkBehaviour
 	{
 		[SerializeField]
 		[Required]
 		private Rigidbody2D rb;
+
+        [SerializeField]
+        [Required]
+        private SpriteRenderer rend;
 
         [SerializeField]
         private Vector2 randDirRange;
@@ -55,6 +59,19 @@ namespace SiegeDefense.Enemy
             {
                 Bounce();
             }
+        }
+
+        public void OnHealthChange(int health)
+        {
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+
+        private void Die()
+        {
+            NetworkServer.Destroy(gameObject);
         }
 
         private void Bounce()

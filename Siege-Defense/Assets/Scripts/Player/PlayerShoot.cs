@@ -8,7 +8,7 @@ namespace SiegeDefense.Player
 		[SerializeField]
 		private GameObject bulletPrefab;
 
-		public void InputShoot()
+		public void OnInputShoot()
         {
 			CmdSyncShoot();
         }

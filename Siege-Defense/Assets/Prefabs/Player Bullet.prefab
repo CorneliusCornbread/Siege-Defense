@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 1927465280801895618}
   - component: {fileID: 1927465280801895621}
   - component: {fileID: 1927465280801895620}
-  m_Layer: 6
+  - component: {fileID: -7569205126012968646}
+  m_Layer: 8
   m_Name: Player Bullet
-  m_TagString: Untagged
+  m_TagString: Player Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,4 +166,21 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   rb: {fileID: 1927465280801895618}
-  speed: 5
+  speed: 10
+  secondsAlive: 5
+--- !u!114 &-7569205126012968646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927465280801895623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b12c6b7859f5ee4580327ecdbfaa070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  damage: 10
+  targetTag: Enemy

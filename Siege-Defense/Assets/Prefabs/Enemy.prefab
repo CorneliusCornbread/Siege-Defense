@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 2201098491531870181}
   - component: {fileID: 2201098491531870180}
   - component: {fileID: 2201098491531870179}
+  - component: {fileID: 4957478277378382011}
   m_Layer: 7
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +133,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2201098491531870180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,4 +166,38 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   rb: {fileID: 2201098491531870181}
+  rend: {fileID: 2201098491531870177}
   randDirRange: {x: 3, y: 2}
+  damageDealt: 10
+--- !u!114 &4957478277378382011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201098491531870176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 927bc1f68b87add4c9b5aada62b4aea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  health: 15
+  visualHealthAffect: 1
+  rend: {fileID: 2201098491531870177}
+  _onHealthChange:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2201098491531870179}
+        m_TargetAssemblyTypeName: SiegeDefense.Enemy.EnemyBehaviour, Assembly-CSharp
+        m_MethodName: OnHealthChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
