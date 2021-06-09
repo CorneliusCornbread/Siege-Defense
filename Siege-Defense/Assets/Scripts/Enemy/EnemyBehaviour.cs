@@ -1,5 +1,6 @@
 using Mirror;
 using SiegeDefense.Game;
+using SiegeDefense.Player;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -71,6 +72,7 @@ namespace SiegeDefense.Enemy
 
         private void Die()
         {
+            ScoreManager.Instance.EnemyKilled();
             NetworkServer.Destroy(gameObject);
         }
 

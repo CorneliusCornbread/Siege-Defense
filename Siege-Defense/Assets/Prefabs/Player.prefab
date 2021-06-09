@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -1467005506236383915}
   - component: {fileID: 6971524335038745936}
   - component: {fileID: 7657502678683261724}
+  - component: {fileID: -8495444033611349858}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -232,8 +233,12 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 25912eba-ac84-4451-8a22-54cd7576c157
     m_ActionName: Player/Shoot[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 39df19f4-07cc-4731-9e37-5c3734a84bdc
+    m_ActionName: Player/Heal Wall[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Keyboard and mouse
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -265,7 +270,7 @@ MonoBehaviour:
   syncInterval: 0.1
   rb: {fileID: 1326952694613125490}
   input: {fileID: 5648118472626715851}
-  speed: 8
+  speed: 11
   maxVelocChange: 1.8
 --- !u!114 &7657502678683261724
 MonoBehaviour:
@@ -282,3 +287,20 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   bulletPrefab: {fileID: 1927465280801895623, guid: 64ae6d0e1c9a8f34791395ba8244e3a7, type: 3}
+  cooldown: 0.1
+--- !u!114 &-8495444033611349858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648118472626715848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b2f42fa33ba7e448b978a4203398a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  rend: {fileID: 5648118472626715850}
+  localColor: {r: 1, g: 0.99388844, b: 0, a: 1}

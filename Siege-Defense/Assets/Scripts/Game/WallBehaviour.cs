@@ -1,22 +1,33 @@
 using Mirror;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Assertions;
 
 namespace SiegeDefense.Game
 {
 	[RequireComponent(typeof(SpriteRenderer))]
 	public class WallBehaviour : NetworkBehaviour
 	{
+		public static WallBehaviour Instance { get; private set; }
+
 		[SerializeField]
 		[Required]
 		private SpriteRenderer rend;
 
-		public void OnWallHealthChange(int health)
+        private void Awake()
+        {
+			Assert.IsNull(Instance);
+			Instance = this;
+        }
+
+        public void OnWallHealthChange(int health)
         {
 			if (health <= 0)
             {
-				Debug.Log("Game over");
+				NetworkManager.singleton.StopHost();
             }
         }
+
+
 	}
 }
