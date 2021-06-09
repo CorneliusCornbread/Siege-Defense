@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 5648118472626715850}
   - component: {fileID: 4779819803887961105}
   - component: {fileID: 1326952694613125490}
+  - component: {fileID: 525409894556193519}
   - component: {fileID: 835119318}
   - component: {fileID: 5648118472626715851}
+  - component: {fileID: -1467005506236383915}
   - component: {fileID: 6971524335038745936}
   - component: {fileID: 7657502678683261724}
   m_Layer: 6
@@ -135,6 +137,23 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &525409894556193519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648118472626715848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 
+  hasSpawned: 0
 --- !u!114 &835119318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +237,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &-1467005506236383915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648118472626715848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc3e49681a4855409d6d2c6d489b672, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6971524335038745936
 MonoBehaviour:
   m_ObjectHideFlags: 0
